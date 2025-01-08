@@ -1,0 +1,10 @@
+Install python from chrome
+
+Install python flask from command prompt in your computer just paste this in command propmpt - pip install flask click enter it will install 
+ 
+App password - wizm phmi ajec sody
+
+API Key - AIzaSyBKYDup83UfSZCNcn_nrhCCR6e2F0oJVts
+
+server link - http://127.0.0.1:5000/
+
