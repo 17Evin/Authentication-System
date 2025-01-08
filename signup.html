@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SignUp Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('scenery.jpg');
+            /* background-image: url("{{ url_for('static', filename='scenery.jpg') }}"); */
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .password-container {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            top: 50%;
+            right: 1px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .center-container {
+            display: inline-block;
+        }
+
+        .SignUp-box {
+            border: 1px solid white;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+            padding-top: 10px;
+            padding-bottom: 30px;
+            padding-right: 90px;
+            padding-left: 60px;
+            color: white;
+        }
+
+        .SignUp-container {
+            max-width: 400px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-right: 50px;
+            border-radius: 5px;
+            border: 1px solid black;
+
+        }
+
+        /* .forgot-password {
+
+            margin-top: 10px;
+            padding-left: 150px;
+            color: white;
+        } */
+
+        .SignUp-button {
+            width: 100%;
+            padding: 10px;
+            /* background-color: #f907fc; */
+            background-image: linear-gradient(315deg, #f907fc 0%, #05d6d9 74%);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .signup {
+            font-size: 15px;
+        }
+
+        .colours {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid black;
+        }
+
+        .social-icon-facebook {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 24px;
+            color: #fff;
+            cursor: pointer;
+            background-color: #042653;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .social-icon-google {
+            display: inline-flex;
+            width: 40px;
+            height: 40px;
+            margin: 10px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+            cursor: pointer;
+            background-color: #e71f0c;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="center-container">
+        <div class="SignUp-box">
+            <div class="SignUp-container">
+                <h2>Sign Up</h2>
+                <form method="post"
+                    action="https://script.google.com/macros/s/AKfycbzEKl9STXJG4pJw87bMSc8Uwumgiuc_KvV_TOwkc1xBaDS1KiuihLJCx3q56Db0bhfW/exec"
+                    name="contact-form">
+
+                    <label for="fname">Name</label>
+                    <input type="text" id="fname" name="name" placeholder="Enter Your Name" autocomplete="off"
+                        required>
+                    <br>
+
+                    <label for="username">Mail ID</label>
+                    <input type="text" id="username" name="mail id" placeholder="Type Your Email-id" autocomplete="off"
+                        required>
+                    <br>
+
+                    <label for="password">Password</label>
+                    <div class="password-container">
+                        <input type="password" id="password" name="password" placeholder="Type Your Password"
+                            autocomplete="off" required>
+                        <span class="toggle-password" onclick="togglePasswordVisibility()">👁️</span>
+                    </div>
+                    <!-- <div class="forgot-password">
+                        <a href="#">Forgot Password?</a>
+                    </div> -->
+
+                    <label for="colors">Choose a colour</label>
+
+                    <select name="color" id="color" class="colours">
+                        <option value="Select ">Select</option>
+                        <option value="Red" style="background-color: red; color: white;"">Red</option>
+                            <option value=" Green"style="background-color: green; color: white;"">Green</option>
+                            <option value=" Blue" style="background-color:blue; color: white;"">Blue</option>
+                            <option value=" Yellow" style="background-color: yellow; color: black;"">Yellow</option>
+                            <option value=" Magenta" style="background-color: magenta; color: white;"">Magenta</option>
+                            <option value=" Gray" style="background-color: gray; color: white;"">Gray</option>
+                            <option value=" Maroon" style="background-color: maroon; color: white;"">Maroon</option>
+                            <option value=" Navy" style="background-color: navy; color: white;"">Navy</option>
+                            <option value=" Purple" style="background-color: purple; color: white;">Purple</option>
+                        <option value="Black" style="background-color: black; color: white;">Black</option>
+                    </select><br>
+                    <br><br>
+
+                    <button type="submit" class="SignUp-button">Sign Up</button>
+                    <br><br>
+                    <div>
+                        <p class="signup"> Or Sign Up Using </p>
+                        <div class="social-icons">
+                            <a href="https://accounts.google.com/serviceSignUp?hl=en-gb" class="social-icon-google"
+                                target="_blank">G</a>
+                            <a href="https://www.googleadservices.com/pagead/aclk?sa=L&ai=DChcSEwi16Pe4soyCAxWpzBYFHQTtAKwYABAAGgJ0bA&gclid=CjwKCAjws9ipBhB1EiwAccEi1IuKwwuOtIECAieTkcH6JFX2_qGUOwxnN1FdHKTxhfQ9Z3-W_preABoC7f8QAvD_BwE&ohost=www.google.com&cid=CAESVuD2_G4-J6Xi1Cbl9AV9Su4ENwtM1K1F6UBrfIKWY-Q5Yn17AK7ZhDpAfZ-dQ1W0rueiW360RAYe3JnC077TJh0eLn2Z67vhlzy2S_R_M1WILtrPBnpd&sig=AOD64_2bAX0-3ovJIYlNPHDwZhEFsaS35A&q&adurl&ved=2ahUKEwiFnfC4soyCAxXEm1YBHQ4bCmsQ0Qx6BAgIEAE"
+                                class="social-icon-facebook" target="_blank">F</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzEKl9STXJG4pJw87bMSc8Uwumgiuc_KvV_TOwkc1xBaDS1KiuihLJCx3q56Db0bhfW/exec'
+
+        const form = document.forms['contact-form']
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => alert("Thank you! your form is submitted successfully."))
+                .then(() => { window.location.reload(); })
+                .catch(error => console.error('Error!', error.message))
+        })
+
+        function togglePasswordVisibility() {
+            var passwordInput = document.getElementById("password");
+            var toggleIcon = document.querySelector(".toggle-password");
+
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                toggleIcon.innerHTML = "👁️";
+            } else {
+                passwordInput.type = "password";
+                toggleIcon.innerHTML = "👁️‍🗨️";
+            }
+        }
+
+        function changeCursor() {
+            document.querySelector(".toggle-password").style.cursor = "pointer";
+        }
+
+        function restoreCursor() {
+            document.querySelector(".toggle-password").style.cursor = "default";
+        }
+    </script>
+</body>
+
+</html>
